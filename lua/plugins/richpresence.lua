@@ -1,9 +1,9 @@
 return {
-    {
-	'vyfor/cord.nvim',
-	---@type CordConfig
-	opts = {
-	    -- ...
-	}
-    }
+	{
+		"vyfor/cord.nvim",
+		---@type CordConfig
+		opts = {
+			-- ...
+		},
+	},
 }

@@ -34,9 +34,9 @@ return {
 
 			signature = {
 				enabled = true,
-				-- window = {
-				-- 	show_documentation = true,
-				-- },
+				window = {
+					show_documentation = true,
+				},
 			},
 
 			-- Default list of enabled providers defined so that you can extend it

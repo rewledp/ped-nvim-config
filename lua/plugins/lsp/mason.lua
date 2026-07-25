@@ -8,6 +8,7 @@ return {
 				"luau_lsp",
 				"ts_ls",
 				"asm_lsp",
+				"clangd",
 			},
 		},
 

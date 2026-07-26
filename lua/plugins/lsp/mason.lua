@@ -11,11 +11,20 @@ return {
 				"clangd",
 			},
 		},
-
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
 		},
 	},
-	"neovim/nvim-lspconfig",
+	{
+		"jay-babu/mason-nvim-dap.nvim",
+		opts = {
+			ensure_installed = { "codelldb" },
+			handlers = {},
+		},
+		dependencies = {
+			{ "mason-org/mason.nvim", opts = {} },
+			"mfussenegger/nvim-dap",
+		},
+	},
 }

@@ -4,4 +4,12 @@ return {
 			vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 		end
 	end,
+
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
 }

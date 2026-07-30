@@ -9,6 +9,7 @@ return {
 				"ts_ls",
 				"asm_lsp",
 				"clangd",
+				"neocmake",
 			},
 		},
 		dependencies = {

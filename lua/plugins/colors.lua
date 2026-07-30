@@ -14,6 +14,7 @@ return {
 		lazy = false,
 		opts = {
 			themes = { "tokyonight", "gruvbox", "nightfox", "everforest", "onedark" },
+			themeConfigFile = "c:\\v:null",
 		},
 
 		config = function(_, opts)

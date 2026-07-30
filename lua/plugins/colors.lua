@@ -35,6 +35,9 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		opts = {
 			theme = "auto",
+			sections = {
+				lualine_x = { "%S", "encoding", "fileformat", "filetype" },
+			},
 		},
 	},
 }

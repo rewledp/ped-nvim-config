@@ -15,6 +15,14 @@ return {
 					end
 				end,
 			},
+
+			["ge"] = {
+				desc = "Open current dir in explorer",
+				callback = function()
+					local dir = require("oil").get_current_dir()
+					vim.ui.open(dir)
+				end,
+			},
 		},
 	},
 

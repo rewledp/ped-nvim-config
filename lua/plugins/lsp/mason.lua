@@ -10,6 +10,7 @@ return {
 				"asm_lsp",
 				"clangd",
 				"neocmake",
+				"jsonls",
 			},
 		},
 		dependencies = {

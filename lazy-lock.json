@@ -1,6 +1,7 @@
 {
   "blink.cmp": { "branch": "main", "commit": "78336bc89ee5365633bcf754d93df01678b5c08f" },
   "catppuccin": { "branch": "main", "commit": "edefef779ab08ce1a4a404713e3012b0d202bd35" },
+  "cellular-automaton.nvim": { "branch": "main", "commit": "1606e9d5d04ff254023c3f3c62842d065708d6d3" },
   "conform.nvim": { "branch": "master", "commit": "619363c30309d29ffa631e67c8183f2a72caa373" },
   "copy-tree.nvim": { "branch": "main", "commit": "1c79dabc00100eb6d5bccf068fdc4dd1d5817464" },
   "cord.nvim": { "branch": "master", "commit": "ffd5450592c6d069ce941b73bbeb3fdf114a3e91" },

@@ -20,7 +20,9 @@ return {
 				desc = "Open current dir in explorer",
 				callback = function()
 					local dir = require("oil").get_current_dir()
-					vim.ui.open(dir)
+					if dir then
+						vim.ui.open(dir)
+					end
 				end,
 			},
 		},

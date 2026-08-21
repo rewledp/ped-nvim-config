@@ -12,6 +12,10 @@ return {
 				"neocmake",
 				"jsonls",
 			},
+
+			automatic_enable = {
+				exclude = { "luau_lsp" },
+			},
 		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },

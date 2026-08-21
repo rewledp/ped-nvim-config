@@ -1,12 +1,15 @@
 return {
 	"stevearc/conform.nvim",
 	opts = {
-		lua = { "selene" },
-		asm = { "asmfmt" },
-		-- rust = { "rustfmt", lsp_format = "fallback" },
+		formatters_by_ft = {
+			luau = { "stylua" },
+			lua = { "stylua" },
+			-- asm = { "asmfmt" },
+		},
+
 		format_on_save = {
 			timeout_ms = 500,
-			lsp_fallback = true,
+			lsp_format = true,
 		},
 	},
 }

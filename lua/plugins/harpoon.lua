@@ -6,9 +6,7 @@ return {
 	config = function()
 		local harpoon = require("harpoon")
 
-		-- REQUIRED
 		harpoon:setup()
-		-- REQUIRED
 
 		vim.keymap.set("n", "<leader>a", function()
 			harpoon:list():add()
@@ -22,13 +20,20 @@ return {
 		end)
 
 		-- Toggle previous & next buffers stored within Harpoon list
-		-- vim.keymap.set("n", "<C-S-P>", function()
-		-- 	harpoon:list():prev()
-		-- end)
+		vim.keymap.set("n", "<A-p>", function()
+			harpoon:list():prev()
+		end)
 
-		-- vim.keymap.set("n", "<C-S-N>", function()
-		-- 	harpoon:list():next()
-		-- end)
+		vim.keymap.set("n", "<A-n>", function()
+			harpoon:list():next()
+		end)
+
+		for i = 1, 9 do
+			local keybind = "<leader>" .. i
+			vim.keymap.set("n", keybind, function()
+				harpoon:list():select(i)
+			end)
+		end
 
 		-- local conf = require("telescope.config").values
 		-- local function toggle_telescope(harpoon_files)

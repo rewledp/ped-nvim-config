@@ -2,6 +2,8 @@ return {
 	"lopi-py/luau-lsp.nvim",
 
 	init = function()
+		local blink = require("blink.cmp")
+
 		vim.lsp.config("*", {
 			capabilities = {
 				workspace = {
@@ -10,6 +12,12 @@ return {
 					},
 				},
 			},
+		})
+
+		local capabilities = blink.get_lsp_capabilities()
+
+		vim.lsp.config("*", {
+			capabilities = capabilities,
 		})
 	end,
 

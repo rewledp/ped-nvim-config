@@ -6,21 +6,7 @@ return {
 	config = function()
 		local harpoon = require("harpoon")
 
-		-- Get Oil's root for the marked harpoon buffers.
-		harpoon:setup({
-			default = {
-				get_root_dir = function()
-					local ok, oil = pcall(require, "oil")
-					if ok then
-						local oil_dir = oil.get_current_dir()
-						if oil_dir then
-							return oil_dir
-						end
-					end
-					return vim.loop.cwd()
-				end,
-			},
-		})
+		-- TODO: Get Oil's root for the marked harpoon buffers.
 
 		vim.keymap.set("n", "<leader>a", function()
 			harpoon:list():add()

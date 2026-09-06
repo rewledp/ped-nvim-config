@@ -30,6 +30,21 @@ return {
 
 	dependencies = { { "nvim-mini/mini.icons", opts = {} } },
 	-- dependencies = { "nvim-tree/nvim-web-devicons" }, -- use if you prefer nvim-web-devicons
-	-- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
 	lazy = false,
+
+	config = function(_, opts)
+		require("oil").setup(opts)
+
+		-- E.g, using zoxide to change dir; Oil needs to know
+		vim.api.nvim_create_autocmd("DirChanged", {
+			callback = function()
+				if vim.api.nvim_buf_get_name(0):match("^oil://") then
+					require("oil").open(vim.fn.getcwd())
+					vim.schedule(function()
+						require("oil.actions").refresh.callback()
+					end)
+				end
+			end,
+		})
+	end,
 }

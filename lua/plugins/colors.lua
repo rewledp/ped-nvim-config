@@ -51,7 +51,36 @@ return {
 		opts = {
 			theme = "auto",
 			sections = {
-				lualine_x = { "%S", "encoding", "fileformat", "filetype" },
+				lualine_x = {
+					"%S",
+					-- Harpoon current index
+					{
+						function()
+							local status, harpoon = pcall(require, "harpoon")
+							if not status then
+								return ""
+							end
+
+							local current_file = vim.api.nvim_buf_get_name(0)
+							local list = harpoon:list()
+							local total = list:length()
+							if total == 0 then
+								return ""
+							end
+
+							for i = 1, total do
+								local item = list.items[i]
+								if item and vim.uv.fs_realpath(item.value) == vim.uv.fs_realpath(current_file) then
+									return string.format("󰀱 %d/%d", i, total)
+								end
+							end
+							return ""
+						end,
+					},
+					"encoding",
+					"fileformat",
+					"filetype",
+				},
 			},
 		},
 	},

@@ -17,8 +17,19 @@ return {
 					require("aerial").next_up()
 				end, { buffer = bufnr, desc = "Parent Symbol Down" })
 			end,
+
+			filter_kind = {
+				"Class",
+				"Constructor",
+				"Enum",
+				"Function",
+				"Interface",
+				"Module",
+				"Method",
+				"Struct",
+			},
 		})
-		vim.keymap.set("n", "<leader>a", "<cmd>AerialToggle!<CR>")
+		vim.keymap.set("n", "<leader>at", "<cmd>AerialToggle!<CR>")
 		vim.keymap.set("n", "<leader>fs", "<cmd>Telescope aerial<CR>", { desc = "Search Symbols (Aerial)" })
 	end,
 }

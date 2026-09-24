@@ -5,7 +5,6 @@ return {
 	config = function(_, opts)
 		require("persistence").setup(opts)
 
-		-- Keymaps to load sessions manually if needed
 		vim.keymap.set("n", "<leader>qs", function()
 			require("persistence").load()
 		end, { desc = "Restore Session" })

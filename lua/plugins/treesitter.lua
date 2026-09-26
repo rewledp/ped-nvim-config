@@ -4,12 +4,12 @@ return {
 	build = ":TSUpdate",
 	config = function()
 		require("nvim-treesitter").setup({
-			ensure_installed = { "lua", "rust", "cpp", "c" },
+			ensure_installed = { "lua", "luau", "rust", "cpp", "c" },
 			auto_install = false,
 		})
 
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = { "lua", "rust", "cpp", "c" },
+			pattern = { "lua", "luau", "rust", "cpp", "c" },
 			callback = function(args)
 				vim.treesitter.start(args.buf)
 			end,

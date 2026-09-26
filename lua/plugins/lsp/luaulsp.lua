@@ -28,7 +28,7 @@ return {
 		types = {
 			roblox_security_level = "PluginSecurity",
 		},
-		source_map = {
+		sourcemap = {
 			enabled = true,
 			autogenerate = true,
 

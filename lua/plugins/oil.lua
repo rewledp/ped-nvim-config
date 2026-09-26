@@ -2,6 +2,7 @@ return {
 	"stevearc/oil.nvim",
 
 	opts = {
+		delete_to_trash = true,
 		keymaps = {
 			["gy"] = {
 				desc = "Copy filepath to system clipboard",

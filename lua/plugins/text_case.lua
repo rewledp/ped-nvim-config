@@ -10,7 +10,7 @@ return {
 			require("telescope").load_extension("textcase")
 		end)
 
-		vim.api.nvim_set_keymap("n", "g.", "<cmd>TextCaseOpenTelescopeLSPChange<CR>", { desc = "LSP Text Case Rename" })
-		vim.api.nvim_set_keymap("v", "g.", "<cmd>TextCaseOpenTelescopeLSPChange<CR>", { desc = "LSP Text Case Rename" })
+		vim.api.nvim_set_keymap("n", "g.", "<cmd>TextCaseOpenTelescope<CR>", { desc = "LSP Text Case Rename" })
+		vim.api.nvim_set_keymap("v", "g.", "<cmd>TextCaseOpenTelescope<CR>", { desc = "LSP Text Case Rename" })
 	end,
 }

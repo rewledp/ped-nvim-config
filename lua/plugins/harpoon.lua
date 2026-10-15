@@ -11,6 +11,7 @@ return {
 		vim.keymap.set("n", "<leader>a", function()
 			harpoon:list():add()
 		end)
+
 		vim.keymap.set("n", "<leader>r", function()
 			harpoon:list():remove()
 		end)
@@ -29,9 +30,13 @@ return {
 		end)
 
 		for i = 1, 9 do
-			local keybind = "<leader>" .. i
-			vim.keymap.set("n", keybind, function()
+			vim.keymap.set("n", "<leader>" .. i, function()
 				harpoon:list():select(i)
+			end)
+
+			-- Extra: substitude
+			vim.keymap.set("n", "<leader>r" .. i, function()
+				harpoon:list():replace_at(i)
 			end)
 		end
 
